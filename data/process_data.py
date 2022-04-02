@@ -83,7 +83,7 @@ def save_data(df, db_file_name):
     # Extract the filename from db_file_name
     file_name = db_file_name.split("/")[-1]
     table_name = file_name.split(".")[0]
-    df.to_sql(table_name, engine, index=False, if_exists = 'replace')
+    df.to_sql(table_name, engine, index=False, if_exists='replace')
 
 
 def main():
