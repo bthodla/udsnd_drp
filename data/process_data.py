@@ -36,7 +36,7 @@ def clean_data(df):
     """
 
     # Create a dataframe of the individual category columns
-    categories = df['categories'].str.split(";", expand = True)
+    categories = df['categories'].str.split(";", expand=True)
     
     # Select the first row of the categories dataframe
     row = categories.iloc[0]
@@ -57,7 +57,7 @@ def clean_data(df):
         categories[column] = pd.to_numeric(categories[column])
     
     # Drop the original categories column from the input dataframe
-    df.drop('categories', axis = 1, inplace = True)
+    df.drop('categories', axis=1, inplace=True)
 
     # Concatenate the input dataframe with the new `categories` dataframe
     df = pd.concat([df, categories], axis=1)

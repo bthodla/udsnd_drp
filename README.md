@@ -1,6 +1,10 @@
 # Project GitHub Name: udsnd_drp
 ## Project Name: Udacity Data Science Nanodegree - Disaster Response Piplelines Project
 
+### Summary
+This project helps a disaster management organization analyze the messages that it receives to build a model that classifies disaster messages.
+
+
 In this project, I was provided with two types of data:
 * Messages relating to disaster(s) that people were experiencing
 * Categories of disasters
@@ -55,3 +59,23 @@ Please be mindful of the sequence of the parameters
 Usage:
 
 &nbsp;&nbsp;&nbsp;&nbsp;python ..\app\run.py
+
+### Project Code Structure
+Project Root
+* app
+  * templates
+    * go.html: this is page that shows classification results
+    * master.html: this is the main page of the web app
+  * run.py: this contains the Flask file that runs the app
+* data
+  * disaster_categories.csv: contains disaster category data
+  * disaster_messages.csv: contains disaster messages data
+  * DisasterResponse.db: the SQLITE database into which the cleaned and merged data is stored
+  * process_data.py: code to load, clean, merge and save the data from the above CSV files
+* models
+  * classifier.pkl: file into which the trained model is saved
+  * train_classifier.py: code to train and save the model
+* notebooks
+  * contains two notebooks to test code before they are written as Python programs
+* README.md: this file
+* LICENSE: Open Source License terms
